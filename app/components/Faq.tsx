@@ -4,24 +4,24 @@ import { useState } from "react";
 
 const faqs = [
   {
-    q: "Do I need coding skills to use this platform?",
-    a: "Nope! Our drag-and-drop builder makes it super easy to create landing pages without writing a single line of code.",
+    q: "Do I need design skills to use Sketch2Design?",
+    a: "Not at all! Just upload a moodboard and sketch your idea—our AI generates the colors, typography and UI for you. You can refine everything with the design chat or by hand.",
   },
   {
-    q: "Can I connect my own domain?",
-    a: "Yes! Custom domains are supported on Pro and Enterprise plans, and setup takes just a few minutes.",
+    q: "How does Sketch2Design create my colors and typography?",
+    a: "You upload moodboard images, and our AI analyzes them to generate a cohesive color palette and a matching typography system tailored to your brand's look and feel.",
   },
   {
-    q: "Is there a free trial available?",
-    a: "Yes! Our free plan lets you build and publish without a credit card. Upgrade any time as you grow.",
+    q: "Can I edit the UI after it's generated?",
+    a: "Yes! Edit any component through the NLP design chat—just describe what you want—or fine-tune spacing, colors, text and layout manually on the canvas.",
   },
   {
-    q: "What happens if I cancel my subscription?",
-    a: "Your account stays active until the end of the billing period, and your pages remain accessible on the free tier.",
+    q: "Can it generate a whole website, not just one screen?",
+    a: "Absolutely. With the workflow option you can generate an entire website's flow—pages, structure and components—in a single click.",
   },
   {
-    q: "Do you offer integrations with third-party tools?",
-    a: "Yes, we support integrations with popular tools like Zapier, WordPress, Shopify, and more to automate your workflows.",
+    q: "Is there a free plan available?",
+    a: "Yes! Our free plan lets you generate palettes, typography and UI without a credit card. Upgrade any time to unlock design chat, workflow generation and more projects.",
   },
 ];
 

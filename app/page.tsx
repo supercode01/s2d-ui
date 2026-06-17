@@ -7,30 +7,34 @@ import HowItWorks from "./components/HowItWorks";
 import Testimonials from "./components/Testimonials";
 
 const features = [
-  { n: "01", title: "Drag & Drop Editor – No Coding Required", desc: "Design high-converting pages in minutes with our intuitive drag-and-drop editor. No coding, no hassle—just pure creativity at your fingertips.", img: "/images/sidebar.jpg" },
-  { n: "02", title: "100+ Pre-Made Templates", desc: "Choose from 100+ stunning, high-converting templates tailored for e-commerce, SaaS, agencies, and more. Just select, customize, and launch.", img: "/images/100-1.jpg" },
-  { n: "03", title: "AI-Powered Copy & Layout Suggestions", desc: "Stuck on what to write? Our AI assistant generates compelling headlines, descriptions, and layouts in seconds—tailored to your audience.", img: "/images/gen-2.jpg" },
-  { n: "04", title: "Optimized for Speed, Built for Conversions", desc: "Every millisecond counts. Our pages load in record time, ensuring better SEO, higher conversions, and a seamless user experience.", img: "/images/group-image-4.webp" },
-  { n: "05", title: "Mobile-First & Responsive Design", desc: "Build pages that adapt perfectly to any screen, ensuring a smooth and engaging experience on mobile, tablet, and desktop.", img: "/images/Macbook.png" },
+  { n: "01", title: "Moodboard-Driven Color & Typography", desc: "Upload a moodboard and our AI extracts a cohesive color palette and typography system for your UI—no more guessing what fits your brand.", img: "/images/Moodboard.png" },
+
+  { n: "02", title: "Inspiration & Canvas to Real UI", desc: "Drop in inspiration images and sketch on the canvas. Sketch2Design generates real, structured UI inside your components in seconds.", img: "/images/Inspiration-Canvas.png" },
+
+  { n: "03", title: "Design Chat — Edit using Prompt", desc: "Refine any component just by describing it. Our NLP design chat understands requests like 'make it bigger' or 'use a darker accent' and applies them instantly.", img: "/images/Design-chat.png" },
+
+  { n: "04", title: "Full Manual Control", desc: "Prefer hands-on? Fine-tune spacing, colors, text and layout directly on the canvas whenever you want—no limits.", img: "/images/Manual-edit.png" },
+  
+  { n: "05", title: "Generate Entire Website Workflows", desc: "Think beyond a single screen. Generate a complete website workflow—pages, flow and structure—in a single click.", img: "/images/Workflow.png" },
 ];
 
 
 const templates = [
-  { label: "Ecommerce", img: "/images/template-1.webp" },
-  { label: "Landing Pages", img: "/images/template-2.webp" },
-  { label: "Portfolio & Creative", img: "/images/template-3.webp" },
-  { label: "Business & Corporate", img: "/images/template-4.webp" },
-  { label: "Blog & Content", img: "/images/template-5.webp" },
-  { label: "SaaS & Startup", img: "/images/template-6.webp" },
+  { label: "Landing Pages", img: "/images/Landing-Page.png" },
+  { label: "Dashboards & SaaS", img: "/images/Dashboard.webp" },
+  { label: "Mobile App UI", img: "/images/Mobile-app-UI.webp" },
+  { label: "E-commerce Screens", img: "/images/E-commerce-store.png" },
+  { label: "Portfolio & Creative", img: "/images/Portfolio.jpg" },
+  { label: "Design Systems", img: "/images/Design-Systems.webp" },
 ];
 
 const benefits = [
-  { title: "Higher Conversions & Revenue", desc: "Build and launch stunning landing pages in minutes instead of weeks—no developers needed!" },
-  { title: "Save Time & Effort", desc: "Skip the long build cycles and ship campaigns the same day you plan them." },
-  { title: "Focus on Marketing, Not Tech", desc: "Spend more time growing your business while we handle the technical complexities." },
-  { title: "Scale Faster", desc: "Quickly test and launch campaigns without waiting for designers or developers." },
-  { title: "Reach Global Audiences", desc: "Easily create and optimize pages for different markets to reach customers worldwide." },
-  { title: "Competitive Edge", desc: "Outperform competitors with pages that load fast, look great, and engage users." },
+  { title: "From Sketch to UI in Minutes", desc: "Turn rough sketches and moodboards into polished, production-ready interfaces—without starting from a blank canvas." },
+  { title: "A Consistent Design System", desc: "Colors and typography are generated from your moodboard, so every screen stays on-brand automatically." },
+  { title: "Edit using Prompt", desc: "Describe the change and the AI design chat handles it—no menus, no manual pixel-pushing required." },
+  { title: "No Design Skills Needed", desc: "Founders, devs and marketers can ship great-looking UI without ever opening a design tool." },
+  { title: "Build Whole Workflows", desc: "Generate an entire website's flow and pages at once, not just one screen at a time." },
+  { title: "Always Stay in Control", desc: "Let the AI do the heavy lifting, then fine-tune everything by hand whenever you want." },
 ];
 
 
@@ -40,9 +44,9 @@ const partners = [
 ];
 
 const plans = [
-  { name: "Free Plan", price: "$0", period: "Per Month", cta: "Start Free", features: ["Drag & Drop Builder", "2 Pages", "Basic Support"], highlight: false },
-  { name: "Pro Plan", price: "$29", period: "Per Month", cta: "Upgrade to Pro", features: ["Drag & Drop Builder", "15 Pages", "Custom Domains", "AI Copywriting", "Advanced Analytics", "Advanced Support"], highlight: true },
-  { name: "Enterprise Plan", price: "Custom", period: "", cta: "Contact Us", features: ["Unlimited Pages", "Custom Domains", "AI Copywriting", "Advanced Analytics", "API Access", "Priority Support"], highlight: false },
+  { name: "Free Plan", price: "$0", period: "Per Month", cta: "Start Free", features: ["Moodboard → Palette & Typography", "2 Projects", "Manual Canvas Editing", "Community Support"], highlight: false },
+  { name: "Pro Plan", price: "$29", period: "Per Month", cta: "Upgrade to Pro", features: ["Everything in Free", "15 Projects", "Inspiration + Canvas → UI", "Design Chat (NLP Editing)", "Website Workflow Generation", "Priority Support"], highlight: true },
+  { name: "Enterprise Plan", price: "Custom", period: "", cta: "Contact Us", features: ["Unlimited Projects", "Team Collaboration", "Custom Design System", "API Access", "SSO & Security Controls", "Dedicated Support"], highlight: false },
 ];
 
 export default function Home() {
@@ -58,12 +62,13 @@ export default function Home() {
 
           <AnimatedHeadline
             className="mt-6 text-4xl md:text-6xl font-extrabold leading-[1.1] text-white"
-            text="Build High-Converting || Landing Pages in Minutes"
+            text="Turn Sketches into Designs || Instantly with S2D"
           />
 
           <p className="hl-word delay-1 mt-6 text-lg text-[var(--muted)] max-w-2xl mx-auto">
-            Effortless drag &amp; drop builder, AI-powered customization, and 100+
-            templates to launch faster.
+            Sketch2Design turns your moodboards, inspiration and rough canvas
+            sketches into polished UI&mdash;then lets you refine it with an AI
+            design chat or by hand.
           </p>
           <div className="hl-word delay-2 mt-8 flex flex-wrap justify-center items-center gap-4">
             <a href="#" className="inline-flex items-center gap-2 rounded-full bg-[var(--surface)] border border-[var(--border)] px-7 py-3 font-semibold shadow-[0_8px_40px_-6px_rgba(108,92,231,0.55)] hover:bg-[var(--surface-2)] hover:shadow-[0_8px_50px_-4px_rgba(108,92,231,0.7)] transition-all duration-300">Get Started <span className="text-base">↓</span></a>
@@ -79,30 +84,14 @@ export default function Home() {
         </Reveal>
       </section>
 
-      {/* PARTNERS MARQUEE */}
-      <section className="py-12 border-y border-[var(--border)]">
-        <p className="text-center text-sm text-[var(--muted)] mb-8">
-          Trusted by 50,000+ Marketers to Build Landing Pages That Work
-        </p>
-        <div className="flex overflow-hidden">
-          <div className="flex animate-marquee gap-16 px-8 shrink-0 items-center">
-            {[...Array(2)].map((_, dup) =>
-              partners.map((p, i) => (
-                <Image key={`${dup}-${i}`} src={p} alt="Partner logo" width={120} height={40} className="h-8 w-auto opacity-50" />
-              ))
-            )}
-          </div>
-        </div>
-      </section>
-
       {/* FEATURES */}
-      <section id="features" className="relative overflow-hidden py-24 px-5">
+      <section id="features" className="relative overflow-hidden py-12 px-5">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] rounded-full bg-[var(--accent)]/10 blur-[140px] pointer-events-none" />
         <div className="relative mx-auto max-w-6xl">
           <Reveal>
-            <p className="text-center text-sm font-semibold text-[var(--accent-2)] uppercase tracking-widest">Next-Gen Landing Page Builder</p>
-            <h2 className="mt-3 text-center font-display text-3xl md:text-4xl font-bold">Powerful Features to Build &amp; Scale Effortlessly</h2>
-            <p className="mt-3 text-center text-[var(--muted)] max-w-2xl mx-auto">Effortlessly create, optimize, and scale high-converting landing pages—no coding required.</p>
+            <p className="text-center text-sm font-semibold text-[var(--accent-2)] uppercase tracking-widest">AI-Powered Sketch to Design</p>
+            <h2 className="mt-3 text-center font-display text-3xl md:text-4xl font-bold">Everything You Need to Go From Idea to UI</h2>
+            <p className="mt-3 text-center text-[var(--muted)] max-w-2xl mx-auto">From moodboards to a finished interface&mdash;generate, chat-edit, and fine-tune your design, all in one place.</p>
           </Reveal>
 
           <div className="mt-14 flex flex-wrap justify-center gap-5">
@@ -129,13 +118,13 @@ export default function Home() {
 
 
       {/* TEMPLATES */}
-      <section id="templates" className="relative overflow-hidden py-24 px-5">
+      <section id="templates" className="relative overflow-hidden py-12 px-5">
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[500px] rounded-full bg-[var(--accent-2)]/10 blur-[140px] pointer-events-none" />
         <div className="relative mx-auto max-w-6xl">
           <Reveal>
-            <p className="text-center text-sm font-semibold text-[var(--accent-2)] uppercase tracking-widest">Next-Gen Landing Page Builder</p>
-            <h2 className="mt-3 text-center font-display text-3xl md:text-4xl font-bold">Build Faster with 300+ Ready-to-Use Templates</h2>
-            <p className="mt-3 text-center text-[var(--muted)] max-w-2xl mx-auto">Launch stunning pages in minutes with fully customizable, high-performance templates for any industry.</p>
+            <p className="text-center text-sm font-semibold text-[var(--accent-2)] uppercase tracking-widest">Designed with Sketch2Design</p>
+            <h2 className="mt-3 text-center font-display text-3xl md:text-4xl font-bold">Generate UI for Any Use Case</h2>
+            <p className="mt-3 text-center text-[var(--muted)] max-w-2xl mx-auto">From landing pages to full dashboards and mobile apps&mdash;sketch it, and let AI turn it into real, editable UI.</p>
           </Reveal>
 
           <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -143,7 +132,7 @@ export default function Home() {
               <Reveal key={t.label} delay={i * 90}>
                 <div className="group rounded-2xl border border-[var(--border)] overflow-hidden">
                   <div className="aspect-[4/3] overflow-hidden">
-                    <Image src={t.img} alt={t.label} width={500} height={375} className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500" />
+                    <Image src={t.img} alt={t.label} width={500} height={375} className="w-full h-full object-cover object-top group-hover:scale-[1.04] transition-transform duration-500" />
                   </div>
                   <div className="p-4 bg-[var(--surface)]"><span className="font-semibold">{t.label}</span></div>
                 </div>
@@ -158,7 +147,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl">
           <Reveal>
             <p className="text-center text-sm font-semibold text-[var(--accent-2)] uppercase tracking-widest">Why Choose Us?</p>
-            <h2 className="mt-3 text-center font-display text-3xl md:text-4xl font-bold">Maximize Results, Minimize Effort</h2>
+            <h2 className="mt-3 text-center font-display text-3xl md:text-4xl font-bold">More Design Output, Far Less Effort</h2>
           </Reveal>
 
           <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -180,12 +169,12 @@ export default function Home() {
 
 
       {/* PRICING */}
-      <section id="pricing" className="py-24 px-5 bg-[var(--surface)]/40">
+      <section id="pricing" className="py-12 px-5 bg-[var(--surface)]/40">
         <div className="mx-auto max-w-6xl">
           <Reveal>
             <p className="text-center text-sm font-semibold text-[var(--accent-2)] uppercase tracking-widest">Pricing Plans</p>
             <h2 className="mt-3 text-center font-display text-3xl md:text-4xl font-bold">Plans That Scale With You</h2>
-            <p className="mt-3 text-center text-[var(--muted)] max-w-2xl mx-auto">Find the perfect plan for your business—flexible, transparent, and packed with powerful tools.</p>
+            <p className="mt-3 text-center text-[var(--muted)] max-w-2xl mx-auto">Start free and upgrade as you design more&mdash;flexible, transparent pricing for every team.</p>
           </Reveal>
 
           <div className="mt-14 grid md:grid-cols-3 gap-6 items-start">
@@ -215,15 +204,14 @@ export default function Home() {
       <Faq />
 
       {/* CTA */}
-      <section className="py-24 px-5">
+      <section className="py-12 px-5">
         <Reveal from="scale">
           <div className="relative mx-auto max-w-4xl rounded-3xl border border-[var(--border)] bg-gradient-to-br from-[var(--accent)]/20 to-[var(--surface)] p-12 text-center overflow-hidden">
             <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-72 h-72 rounded-full bg-[var(--accent-2)]/20 blur-[100px]" />
-            <h2 className="relative font-display text-3xl md:text-4xl font-bold">Your Next High-Performing Landing Page Starts Here!</h2>
-            <p className="relative mt-4 text-[var(--muted)] max-w-xl mx-auto">Try it free for 14 days – no credit card required. Get started today and see why thousands of marketers love our AI-powered builder.</p>
-            <div className="relative mt-8 flex flex-wrap justify-center gap-4">
-              <a href="#" className="rounded-full bg-[var(--accent)] px-7 py-3 font-semibold hover:opacity-90 transition">Log In</a>
-              <a href="#" className="rounded-full border border-[var(--border)] px-7 py-3 font-semibold hover:bg-[var(--surface)] transition">See Live Examples</a>
+            <h2 className="relative font-display text-3xl md:text-4xl font-bold">Your Next Interface Starts with a Sketch!</h2>
+            <p className="relative mt-4 text-[var(--muted)] max-w-xl mx-auto">Try it free – no credit card required. Upload a moodboard, sketch your idea, and watch Sketch2Design turn it into real UI.</p>
+            <div className="relative mt-8 flex justify-center">
+              <a href="#" className="rounded-full bg-[var(--accent)] px-7 py-3 font-semibold hover:opacity-90 transition">Get Started Free</a>
             </div>
           </div>
         </Reveal>
@@ -232,14 +220,10 @@ export default function Home() {
       {/* FOOTER */}
       <footer className="border-t border-[var(--border)] py-12 px-5">
         <div className="mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-6">
-          <Image src="/images/logo-light-2.png" alt="BrightHub" width={140} height={32} className="h-8 w-auto" />
-          <nav className="flex flex-wrap justify-center gap-6 text-sm text-[var(--muted)]">
-            <a href="#features" className="hover:text-[var(--text)]">Features</a>
-            <a href="#how-it-works" className="hover:text-[var(--text)]">How It Works</a>
-            <a href="#templates" className="hover:text-[var(--text)]">Templates</a>
-            <a href="#pricing" className="hover:text-[var(--text)]">Pricing</a>
-          </nav>
-          <p className="text-sm text-[var(--muted)]">© 2026 BrightHub. All rights reserved.</p>
+          <Image src="/images/logo-light-2.png" alt="Sketch2Design" width={140} height={32} className="h-8 w-auto" />
+
+          <p className="text-sm text-[var(--muted)]">Turn sketches into Stunning UI with S2D</p>
+          <p className="text-sm text-[var(--muted)]">© 2026 Sketch2Design. All rights reserved.</p>
         </div>
       </footer>
     </main>

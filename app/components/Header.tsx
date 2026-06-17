@@ -6,7 +6,7 @@ import Image from "next/image";
 const links = [
   { label: "Features", href: "#features" },
   { label: "How It Works", href: "#how-it-works" },
-  { label: "Templates", href: "#templates" },
+  { label: "Showcase", href: "#templates" },
   { label: "Testimonials", href: "#testimonials" },
   { label: "Pricing", href: "#pricing" },
 ];
@@ -21,7 +21,7 @@ export default function Header() {
           {/* apni logo /public/images/ mein rakho */}
           <Image
             src="/images/logo-light-2.png"
-            alt="BrightHub"
+            alt="Sketch2Design"
             width={140}
             height={32}
             className="h-8 w-auto"

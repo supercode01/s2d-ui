@@ -15,9 +15,9 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "BrightHub — Build High-Converting Landing Pages in Minutes",
+  title: "Sketch2Design — Turn Moodboards & Sketches into Real UI with AI",
   description:
-    "Effortless drag & drop builder, AI-powered customization, and 100+ templates to launch faster.",
+    "Sketch2Design generates color palettes and typography from your moodboards, turns inspiration and canvas sketches into real UI, and lets you refine everything with an AI design chat. Generate entire website workflows in one click.",
 };
 
 export default function RootLayout({

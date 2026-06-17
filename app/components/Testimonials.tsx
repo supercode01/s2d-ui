@@ -5,12 +5,12 @@ import Image from "next/image";
 type T = { quote: string; name: string; role: string; img: string };
 
 const testimonials: T[] = [
-  { quote: "I've tried several page builders, but this one stands out for its ease of use and powerful features. A game-changer for our campaigns!", name: "Jake", role: "ElevateHub", img: "/images/testmonial-1.webp" },
-  { quote: "What took hours now takes minutes. The A/B testing and built-in SEO tools helped us optimize faster than ever.", name: "Olivia", role: "Growthly", img: "/images/testimonial-3.webp" },
-  { quote: "A total game-changer for our global campaigns. It empowers non-tech teams to execute at speed and scale.", name: "Luca Rossi", role: "Growth Lead, EMEA", img: "/images/testimonial-6-1.webp" },
-  { quote: "From templates to integrations, everything works smoothly. Our conversion rate improved by 40% in the first month!", name: "Sophia", role: "LaunchPro", img: "/images/testimonial-4.webp" },
-  { quote: "It combines flexibility with sheer speed. Intuitive, fast, and makes our marketing workflow smoother than ever.", name: "Emily Carter", role: "Senior Marketing Manager", img: "/images/testimonial-5.webp" },
-  { quote: "Building and launching pages has never been this seamless. We reduced turnaround time by 60%.", name: "James O'Neill", role: "Director of Digital Strategy", img: "/images/testimonial-7-1.webp" },
+  { quote: "I uploaded a moodboard and Sketch2Design instantly nailed our colors and typography. It's like having a design system on tap.", name: "Jake", role: "Founder, ElevateHub", img: "/images/testimonial-1.webp" },
+  { quote: "I sketched a rough layout on the canvas and got real, editable UI back in seconds. What used to take hours now takes minutes.", name: "Olivia", role: "Product Designer", img: "/images/testimonial-3.webp" },
+  { quote: "The design chat is magic—I just describe the change in plain English and it happens. Non-designers on my team can actually contribute now.", name: "Luca Rossi", role: "Product Lead, EMEA", img: "/images/testimonial-6-1.webp" },
+  { quote: "Generating the whole website workflow at once saved us weeks of wireframing. We went from idea to clickable UI the same day.", name: "Sophia", role: "Startup Founder", img: "/images/testimonial-4.webp" },
+  { quote: "It strikes the perfect balance—AI does the heavy lifting, and I still fine-tune everything by hand on the canvas.", name: "Emily Carter", role: "Senior UI Designer", img: "/images/testimonial-5.webp" },
+  { quote: "From moodboard to polished components, the flow is seamless. Sketch2Design has cut our design turnaround by more than half.", name: "James O'Neill", role: "Head of Design", img: "/images/testimonial-7-1.webp" },
 ];
 
 const row1 = testimonials.slice(0, 3);
@@ -42,10 +42,10 @@ export default function Testimonials() {
           Testimonials
         </p>
         <h2 className="mt-3 text-center font-display text-3xl md:text-4xl font-bold">
-          Success Stories from Businesses Like Yours
+          Loved by Designers and Builders Alike
         </h2>
         <p className="mt-3 text-center text-[var(--muted)] max-w-2xl mx-auto">
-          See how brands are scaling their marketing with our no-code landing page builder.
+          See how teams are turning sketches and moodboards into real UI with Sketch2Design.
         </p>
       </div>
 

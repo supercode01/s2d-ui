@@ -6,34 +6,42 @@ import Image from "next/image";
 const steps = [
   {
     n: "01",
-    title: "Choose a Template or Start from Scratch",
-    desc: "Save time with 100+ high-converting templates or design a custom page for your brand—perfect for sales, signups, and launches.",
-    img: "/images/step-1.jpg",
+    title: "Add Your Moodboard & Inspiration",
+    desc: "Upload moodboard and inspiration images. Sketch2Design generates a matching color palette and typography system for your UI.",
+    img: "/images/Moodboard.png",
   },
   {
     n: "02",
-    title: "Customize with Drag & Drop Editor",
-    desc: "Tweak every section visually—text, images, colors and layout—without touching code.",
-    img: "/images/step-2.jpg",
+    title: "Sketch on the Canvas",
+    desc: "Sketch your layout on the canvas and let AI generate real, structured UI inside your components in seconds.",
+    img: "/images/Canvas-Design.png",
   },
   {
     n: "03",
-    title: "Optimize & Publish",
-    desc: "Run built-in SEO checks, connect your domain, and go live in a single click.",
-    img: "/images/step-3.jpg",
+    title: "Refine with Design Chat",
+    desc: "Edit anything through the NLP design chat or by hand—then generate the full website workflow in one click.",
+    img: "/images/Design-chat.png",
   },
 ];
 
 export default function HowItWorks() {
   const [active, setActive] = useState(0);
+  const [paused, setPaused] = useState(false);
 
-  // har 4 second baad agla step (auto-play)
+  // har 4 second baad agla step (auto-play) — user ke click karne par ruk jata hai
   useEffect(() => {
+    if (paused) return;
     const t = setInterval(() => {
       setActive((p) => (p + 1) % steps.length);
     }, 4000);
     return () => clearInterval(t);
-  }, []);
+  }, [paused]);
+
+    useEffect(() => {
+    if (!paused) return;
+    const r = setTimeout(() => setPaused(false), 8000);
+    return () => clearTimeout(r);
+  }, [paused, active]);
 
   return (
     <section id="how-it-works" className="py-24 px-5 bg-[var(--surface)]/40">
@@ -44,7 +52,7 @@ export default function HowItWorks() {
             How It Works
           </span>
           <h2 className="mt-5 font-display text-3xl md:text-4xl font-bold leading-tight">
-            Launch High-Converting Pages in 3 Steps
+            From Sketch to Polished UI in 3 Steps
           </h2>
 
           <div className="mt-10 relative">
@@ -57,7 +65,10 @@ export default function HowItWorks() {
                 return (
                   <button
                     key={s.n}
-                    onClick={() => setActive(i)}
+                    onClick={() => {
+                      setActive(i);
+                      setPaused(true);
+                    }}
                     className="relative flex gap-5 text-left w-full rounded-2xl p-4 transition-colors"
                   >
                     {/* number bubble */}
@@ -104,14 +115,14 @@ export default function HowItWorks() {
               <span className="w-3 h-3 rounded-full bg-green-400/70" />
             </div>
 
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-[var(--surface-2)]">
+            <div className="relative aspect-video rounded-2xl overflow-hidden bg-black">
               {steps.map((s, i) => (
                 <Image
                   key={s.n}
                   src={s.img}
                   alt={s.title}
                   fill
-                  className={`object-cover transition-all duration-700 ${
+                  className={`object-contain transition-all duration-700 ${
                     i === active ? "opacity-100 scale-100" : "opacity-0 scale-105"
                   }`}
                 />
