@@ -20,7 +20,7 @@ export default function Header() {
         <a href="#" className="flex items-center">
           {/* apni logo /public/images/ mein rakho */}
           <Image
-            src="/images/logo-light-2.png"
+            src="/images/Logo_final.png"
             alt="Sketch2Design"
             width={140}
             height={32}

@@ -220,7 +220,7 @@ export default function Home() {
       {/* FOOTER */}
       <footer className="border-t border-[var(--border)] py-12 px-5">
         <div className="mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-6">
-          <Image src="/images/logo-light-2.png" alt="Sketch2Design" width={140} height={32} className="h-8 w-auto" />
+          <Image src="/images/Logo_final.png" alt="Sketch2Design" width={140} height={32} className="h-8 w-auto" />
 
           <p className="text-sm text-[var(--muted)]">Turn sketches into Stunning UI with S2D</p>
           <p className="text-sm text-[var(--muted)]">© 2026 Sketch2Design. All rights reserved.</p>
